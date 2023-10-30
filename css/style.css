@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root{
+    --para-color:rgb(45, 44, 44);
+}
+body{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: mandatory;
+    width: 100%;
+
+}
+
+/* css for header */
+header{
+    height: 70px;
+    background-color:teal;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav{
+    padding: 0 20px;
+    display: flex;
+    align-items:center ;
+    justify-content: space-between;
+    position: relative;
+}
+/* .logo{
+
+} */
+.logo a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+}
+.logo img{
+   width: 70px;
+   height: auto;
+   padding-top: 4px;
+}
+.nav-links{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+.nav-links ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-top: 15px;
+    list-style: none;
+}
+.nav-links ul li a{
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+
+}
+.nav-links ul li a::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    border-radius: 10px;
+    background:white;
+    transition: all 0.25s ease-in;
+}
+.nav-links ul li a:hover::after{
+    width: 100%;
+}
+.button{
+   background-color: orange;
+   cursor: pointer;
+   padding: 4px 12px;
+   border: 1px solid transparent;
+   outline: none;
+   border-radius: 6px;
+   color: white;
+   font-size:  1.5vw;
+   transition: all 0.3s ease-in;
+}
+.button:hover{
+    background-color: transparent;
+    color: orange;
+    border: 1px solid orange;
+}
+#menu-bar{
+    display: none;
+}
+.login-box{
+    position: absolute;
+    top: -300px;
+    right:0;
+    background-color:teal;
+    height: 250px;;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 6px;
+    transition: all 0.3s ease-in;
+    z-index: 1;
+}
+.login-box-display{
+    top: 70px;
+}
+.login-input input{
+    width: 200px;
+    padding: 8px 12px;
+    margin: 10px;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+
+}
+.mobile-menu{
+  display: none;
+  
+}
+@media screen and (max-width:768px) {
+.logo a{
+    font-size: 16px;
+}
+.logo a img{
+    padding: 3px;
+}
+.nav-links ul{
+    display: none;
+}
+.button{
+    font-size: 2vw;
+    padding: 8px 10px;
+}
+#menu-bar{
+    display: block;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+.mobile-menu{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    width: 100vw;
+    height: 250px;
+    background-color: orange;
+    position: absolute;
+    top:-100vh;
+    transition: all 0.3s ease;
+    /* z-index: 2; */
+  }
+  
+  .mobile-menu-display{
+      top: 70px;
+  }
+  .mobile-menu ul{
+      margin-top: 20px;
+  }
+  .mobile-menu ul li{
+      list-style: none;
+      margin: 10px;
+  }
+  .mobile-menu ul li a{
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      font-size: 18px;
+      position: relative;
+  }
+  .mobile-menu ul li a::after{
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    height: 2px;
+    background: white;
+    border-radius: 10px;
+    width: 0%;
+    left: 0;
+    transition: all 0.25s ease-in;
+
+  }
+  .mobile-menu ul li a:hover::after{
+    width: 100%;
+  }
+}
+
+/* css for hero section */
+.hero{
+    position: relative;
+  
+}
+.hero h2{
+    
+}
+.hero img{
+    height: 100vh;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+.clz-tag-text{
+    position: absolute;
+    top: 30%;
+    left: 3px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.about-us{
+    background-color: #eff7ff;
+}
+.about-us h2{
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 2px;
+    padding:10px 0;
+    margin: 40px 0;
+}
+
+.about-us h2 span{
+    color: orangered;
+    margin: 0 4px;
+}
+.about-us img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about-us p{
+    color: #777;
+    font-size: 18px;
+}
+@media screen and (max-width:500px) {
+    .about-us img{
+        margin: 0;
+    }
+}
